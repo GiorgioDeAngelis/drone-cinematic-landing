@@ -52,7 +52,7 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section id="services" className="section-padding bg-gradient-to-b from-drone-dark to-drone-darkBlue" ref={sectionRef}>
+    <section id="services" className="section-padding bg-gradient-to-b from-neutral-900 to-neutral-800" ref={sectionRef}>
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="drone-subheading mb-2 animate-on-scroll">I Nostri <span className="text-drone-orange">Servizi</span></h2>

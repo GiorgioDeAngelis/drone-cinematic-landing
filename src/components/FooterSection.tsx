@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const FooterSection = () => {
   return (
-    <footer className="bg-black py-12 px-6">
+    <footer className="bg-neutral-950 py-12 px-6">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 justify-between w-full">
           <div className="md:col-span-1">

@@ -5,8 +5,8 @@ const HeroSection = () => {
   return <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video/Image */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-drone-dark/70 via-drone-dark/60 to-drone-dark z-10"></div>
-        <img src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?auto=format&fit=crop&q=80" alt="Drone in flight" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/70 via-neutral-900/60 to-neutral-900 z-10"></div>
+        <img src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?auto=format&fit=crop&q=80&grayscale=1" alt="Drone in flight" className="absolute inset-0 w-full h-full object-cover" />
       </div>
       
       {/* Content */}
@@ -30,7 +30,7 @@ const HeroSection = () => {
             <Button size="lg" className="bg-drone-orange hover:bg-drone-orange/90 text-white">
               Richiedi un preventivo <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="outline" size="lg" className="border-drone-orange/30 hover:bg-drone-orange/10 text-black hover:text-drone-orange transition-colors">
+            <Button variant="outline" size="lg" className="border-drone-orange/30 hover:bg-drone-orange/10 text-white hover:text-drone-orange transition-colors">
               Scopri i nostri servizi
             </Button>
           </div>

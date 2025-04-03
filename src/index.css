@@ -58,7 +58,7 @@
   }
 
   body {
-    @apply bg-black text-white font-poppins;
+    @apply bg-neutral-950 text-white font-poppins;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -88,7 +88,7 @@
   }
   
   .service-card {
-    @apply bg-black/30 border border-drone-orange/20 rounded-lg p-6 transition-all duration-300 hover:border-drone-orange hover:shadow-[0_0_30px_rgba(255,122,0,0.2)] hover:-translate-y-1;
+    @apply bg-neutral-800/30 border border-drone-orange/20 rounded-lg p-6 transition-all duration-300 hover:border-drone-orange hover:shadow-[0_0_30px_rgba(255,122,0,0.2)] hover:-translate-y-1;
   }
   
   .portfolio-item {
@@ -96,7 +96,7 @@
   }
   
   .portfolio-overlay {
-    @apply absolute inset-0 bg-gradient-to-b from-black/90 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6;
+    @apply absolute inset-0 bg-gradient-to-b from-neutral-900/90 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6;
   }
   
   .portfolio-grid {

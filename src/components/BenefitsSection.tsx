@@ -57,7 +57,7 @@ const BenefitsSection = () => {
   }, []);
 
   return (
-    <section className="section-padding bg-gradient-to-b from-drone-darkBlue to-drone-dark" ref={sectionRef}>
+    <section className="section-padding bg-gradient-to-b from-neutral-800 to-neutral-900" ref={sectionRef}>
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="drone-subheading mb-2 animate-on-scroll">I <span className="text-drone-orange">Vantaggi</span></h2>

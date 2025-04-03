@@ -58,7 +58,7 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section id="testimonials" className="section-padding bg-drone-dark" ref={sectionRef}>
+    <section id="testimonials" className="section-padding bg-neutral-900" ref={sectionRef}>
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="drone-subheading mb-2 animate-on-scroll">
@@ -71,7 +71,7 @@ const TestimonialsSection = () => {
         
         <div className="max-w-4xl mx-auto animate-on-scroll">
           <Tabs defaultValue="1" className="w-full">
-            <TabsList className="grid grid-cols-3 mb-8 bg-black/30">
+            <TabsList className="grid grid-cols-3 mb-8 bg-neutral-800/30">
               {testimonials.map((testimonial) => (
                 <TabsTrigger key={testimonial.id} value={testimonial.id} className="data-[state=active]:bg-drone-orange data-[state=active]:text-white">
                   {testimonial.name}
@@ -81,7 +81,7 @@ const TestimonialsSection = () => {
             
             {testimonials.map((testimonial) => (
               <TabsContent key={testimonial.id} value={testimonial.id} className="mt-6">
-                <div className="flex flex-col md:flex-row gap-6 items-center bg-black/30 p-6 rounded-lg border border-drone-orange/20">
+                <div className="flex flex-col md:flex-row gap-6 items-center bg-neutral-800/30 p-6 rounded-lg border border-drone-orange/20">
                   <div className="flex-shrink-0">
                     <img 
                       src={testimonial.image} 

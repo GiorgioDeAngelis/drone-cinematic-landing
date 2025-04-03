@@ -25,7 +25,7 @@ const PackagesSection = () => {
       price: "150-500€",
       description: "Perfetto per piccoli progetti e riprese essenziali",
       features: [
-        "10 foto aeree ad alta risoluzione",
+        "10 foto aer  ee ad alta risoluzione",
         "1 video breve (30-60 secondi)",
         "Consegna entro 3 giorni lavorativi",
         "1 revisione inclusa"
@@ -76,7 +76,7 @@ const PackagesSection = () => {
   };
 
   return (
-    <section id="packages" className="section-padding bg-black">
+    <section id="packages" className="section-padding bg-neutral-900">
       <div className="container mx-auto">
         <div className="section-title-container animate-on-scroll">
           <span className="section-subtitle">I Nostri Servizi</span>
@@ -90,7 +90,7 @@ const PackagesSection = () => {
           {packageOptions.map((pkg, index) => (
             <ScrollAnimation key={pkg.id} delay={index * 150}>
               <Card 
-                className={`relative overflow-hidden bg-black/40 border ${
+                className={`relative overflow-hidden bg-neutral-800/40 border ${
                   pkg.popular ? 'border-drone-orange' : 'border-drone-orange/20'
                 } hover:border-drone-orange hover:shadow-[0_0_30px_rgba(255,122,0,0.2)] transition-all duration-300 h-full flex flex-col`}
               >

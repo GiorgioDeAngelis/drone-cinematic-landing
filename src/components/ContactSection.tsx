@@ -60,7 +60,7 @@ const ContactSection = () => {
   }, []);
 
   return (
-    <section id="contact" className="section-padding bg-gradient-to-b from-drone-dark to-drone-darkBlue" ref={sectionRef}>
+    <section id="contact" className="section-padding bg-gradient-to-b from-neutral-900 to-neutral-800" ref={sectionRef}>
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="drone-subheading mb-2 animate-on-scroll">
@@ -74,7 +74,7 @@ const ContactSection = () => {
         <div className="max-w-xl mx-auto animate-on-scroll">
           <form 
             onSubmit={handleSubmit} 
-            className="bg-black/30 p-8 rounded-lg border border-drone-orange/20"
+            className="bg-neutral-900/30 p-8 rounded-lg border border-drone-orange/20"
           >
             <div className="grid gap-6">
               <div>
@@ -82,7 +82,7 @@ const ContactSection = () => {
                 <Input 
                   id="name" 
                   placeholder="Il tuo nome" 
-                  className="bg-black/50 border-drone-orange/20 focus:border-drone-orange mt-1"
+                  className="bg-neutral-900/50 border-drone-orange/20 focus:border-drone-orange mt-1"
                   required
                 />
               </div>
@@ -93,7 +93,7 @@ const ContactSection = () => {
                   id="email" 
                   type="email" 
                   placeholder="La tua email" 
-                  className="bg-black/50 border-drone-orange/20 focus:border-drone-orange mt-1"
+                  className="bg-neutral-900/50 border-drone-orange/20 focus:border-drone-orange mt-1"
                   required
                 />
               </div>
@@ -103,7 +103,7 @@ const ContactSection = () => {
                 <Textarea 
                   id="project" 
                   placeholder="Descrivi brevemente il tuo progetto" 
-                  className="bg-black/50 border-drone-orange/20 focus:border-drone-orange mt-1"
+                  className="bg-neutral-900/50 border-drone-orange/20 focus:border-drone-orange mt-1"
                   rows={4}
                   required
                 />
