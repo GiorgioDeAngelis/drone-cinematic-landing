@@ -3,6 +3,7 @@ import { Camera, FileVideo, Image, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import ScrollAnimation from "./ScrollAnimation";
+
 interface PackageOption {
   id: number;
   title: string;
@@ -12,8 +13,10 @@ interface PackageOption {
   icon: React.ReactNode;
   popular?: boolean;
 }
+
 const PackagesSection = () => {
   const [selectedPackage, setSelectedPackage] = useState<number | null>(null);
+  
   const packageOptions: PackageOption[] = [{
     id: 1,
     title: "Base",
@@ -37,16 +40,18 @@ const PackagesSection = () => {
     features: ["Riprese aeree illimitate dell'evento", "Montaggio video avanzato (5-10 minuti)", "Riprese con drone a doppio operatore", "Effetti speciali e transizioni cinematiche", "Licenza commerciale estesa", "Consegna prioritaria entro 7 giorni lavorativi", "Revisioni illimitate per 30 giorni"],
     icon: <Video className="h-10 w-10 text-drone-orange" />
   }];
+
   const handlePackageSelect = (id: number) => {
     setSelectedPackage(id);
-    // In a real application, this would navigate to a checkout page or open a contact form
     setTimeout(() => {
-      // Reset selection after a brief delay for visual feedback
       setSelectedPackage(null);
     }, 300);
   };
+
   return <section id="packages" className="section-padding bg-neutral-900">
       <div className="container mx-auto">
+        <h1 className="text-4xl font-montserrat font-extrabold text-white text-center mb-8">Pacchetti e Prezzi</h1>
+        
         <div className="section-title-container animate-on-scroll">
           <span className="section-subtitle">I Nostri Servizi</span>
           <h2 className="section-title">Pacchetti Riprese con Drone</h2>
@@ -97,4 +102,5 @@ const PackagesSection = () => {
       </div>
     </section>;
 };
+
 export default PackagesSection;
