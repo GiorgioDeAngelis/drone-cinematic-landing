@@ -49,7 +49,8 @@ const PackagesSection = () => {
     }, 300);
   };
 
-  return <section id="packages" className="section-padding bg-neutral-900">
+  return (
+    <section id="packages" className="section-padding bg-neutral-900">
       <div className="container mx-auto">
         <div className="section-title-container animate-on-scroll">
           <span className="section-subtitle">I Nostri Servizi</span>
@@ -60,13 +61,16 @@ const PackagesSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-          {packageOptions.map((pkg, index) => <ScrollAnimation key={pkg.id} delay={index * 150}>
+          {packageOptions.map((pkg, index) => (
+            <ScrollAnimation key={pkg.id} delay={index * 150}>
               <Card className={`relative overflow-hidden bg-neutral-800/40 border ${pkg.popular ? 'border-drone-orange' : 'border-drone-orange/20'} hover:border-drone-orange hover:shadow-[0_0_30px_rgba(255,122,0,0.2)] transition-all duration-300 h-full flex flex-col`}>
-                {pkg.popular && <div className="absolute top-0 right-0">
+                {pkg.popular && (
+                  <div className="absolute top-0 right-0">
                     <div className="bg-drone-orange text-white text-xs font-bold px-3 py-1 rotate-0 transform origin-top-right">
                       POPOLARE
                     </div>
-                  </div>}
+                  </div>
+                )}
                 <CardHeader className="pb-2">
                   <div className="mb-2">{pkg.icon}</div>
                   <CardTitle className="text-2xl font-montserrat font-extrabold text-slate-50">{pkg.title}</CardTitle>
@@ -75,19 +79,25 @@ const PackagesSection = () => {
                 </CardHeader>
                 <CardContent className="flex-grow">
                   <ul className="space-y-2">
-                    {pkg.features.map((feature, i) => <li key={i} className="flex items-start">
+                    {pkg.features.map((feature, i) => (
+                      <li key={i} className="flex items-start">
                         <div className="mr-2 text-drone-orange mt-0.5">•</div>
                         <span className="text-gray-300 text-sm">{feature}</span>
-                      </li>)}
+                      </li>
+                    ))}
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Button onClick={() => handlePackageSelect(pkg.id)} className={`w-full font-montserrat font-bold ${pkg.popular ? 'bg-drone-orange hover:bg-drone-orange/90 text-white' : 'bg-transparent border border-drone-orange text-drone-orange hover:bg-drone-orange/10'} transition-all duration-300 transform ${selectedPackage === pkg.id ? 'scale-95' : ''}`}>
+                  <Button 
+                    onClick={() => handlePackageSelect(pkg.id)} 
+                    className={`w-full font-montserrat font-bold ${pkg.popular ? 'bg-drone-orange hover:bg-drone-orange/90 text-white' : 'bg-transparent border border-drone-orange text-drone-orange hover:bg-drone-orange/10'} transition-all duration-300 transform ${selectedPackage === pkg.id ? 'scale-95' : ''}`}
+                  >
                     Seleziona Pacchetto
                   </Button>
                 </CardFooter>
               </Card>
-            </ScrollAnimation>)}
+            </ScrollAnimation>
+          ))}
         </div>
 
         <div className="text-center mt-16 animate-on-scroll">
@@ -99,7 +109,8 @@ const PackagesSection = () => {
           </Button>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default PackagesSection;
