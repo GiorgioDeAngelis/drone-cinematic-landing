@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 32 100% 50%;
+    --primary: 0 0% 33.3%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
@@ -33,7 +33,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 32 100% 50%;
+    --ring: 0 0% 33.3%;
 
     --radius: 0.5rem;
 
@@ -58,7 +58,7 @@
   }
 
   body {
-    @apply bg-black text-white font-poppins;
+    @apply bg-drone-dark text-white font-poppins;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -88,7 +88,7 @@
   }
   
   .service-card {
-    @apply bg-black/30 border border-drone-orange/20 rounded-lg p-6 transition-all duration-300 hover:border-drone-orange hover:shadow-[0_0_30px_rgba(255,122,0,0.2)] hover:-translate-y-1;
+    @apply bg-black/30 border border-drone-orange/20 rounded-lg p-6 transition-all duration-300 hover:border-drone-orange hover:shadow-[0_0_30px_rgba(85,85,85,0.2)] hover:-translate-y-1;
   }
   
   .portfolio-item {

@@ -6,7 +6,7 @@ const HeroSection = () => {
       {/* Background Video/Image */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-drone-dark/70 via-drone-dark/60 to-drone-dark z-10"></div>
-        <img src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?auto=format&fit=crop&q=80" alt="Drone in flight" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?auto=format&fit=crop&q=80" alt="Drone in flight" className="absolute inset-0 w-full h-full object-cover grayscale" />
       </div>
       
       {/* Content */}
