@@ -118,6 +118,9 @@ export default {
 				'poppins': ['Poppins', 'sans-serif'],
 				'montserrat': ['Montserrat', 'sans-serif'],
 			},
+			fontWeight: {
+				'extrabold': '800',
+			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

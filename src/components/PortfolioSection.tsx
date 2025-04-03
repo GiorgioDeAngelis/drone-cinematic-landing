@@ -114,7 +114,7 @@ const PortfolioSection = () => {
                         <ArrowUpRight className="w-4 h-4 text-white" />
                       </div>
                     </div>
-                    <div className={`absolute top-6 left-6 text-2xl font-bold opacity-60 transform ${
+                    <div className={`absolute top-6 left-6 text-2xl font-extrabold opacity-60 transform ${
                       hoveredItem === item.id ? 'translate-x-2' : 'translate-x-0'
                     } transition-all duration-300`}>
                       {item.number}
@@ -134,7 +134,7 @@ const PortfolioSection = () => {
         
         <div className="flex justify-center mt-12 animate-on-scroll">
           <button className="group flex items-center text-white hover:text-drone-orange transition-colors duration-300">
-            <span className="mr-2">Visualizza tutti i progetti</span>
+            <span className="mr-2 font-montserrat font-extrabold">Visualizza tutti i progetti</span>
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </button>
         </div>
@@ -153,7 +153,7 @@ const PortfolioSection = () => {
                 <p className="portfolio-category">
                   {portfolioItems.find(item => item.id === selectedItem)?.category}
                 </p>
-                <h3 className="text-2xl font-medium mt-1 mb-4">
+                <h3 className="text-2xl font-montserrat font-extrabold mt-1 mb-4">
                   {portfolioItems.find(item => item.id === selectedItem)?.title}
                 </h3>
                 <p className="text-gray-400">
