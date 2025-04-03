@@ -58,7 +58,11 @@
   }
 
   body {
-    @apply bg-drone-dark text-white font-poppins;
+    @apply bg-black text-white font-poppins;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
   }
 }
 
@@ -68,11 +72,11 @@
   }
   
   .drone-heading {
-    @apply font-playfair font-bold text-4xl md:text-5xl lg:text-6xl;
+    @apply font-playfair font-bold text-4xl md:text-5xl lg:text-6xl tracking-tight;
   }
   
   .drone-subheading {
-    @apply font-playfair font-medium text-2xl md:text-3xl;
+    @apply font-playfair font-medium text-2xl md:text-3xl tracking-tight;
   }
   
   .animate-on-scroll {
@@ -88,10 +92,39 @@
   }
   
   .portfolio-item {
-    @apply relative overflow-hidden rounded-lg transition-all duration-300;
+    @apply relative overflow-hidden transition-all duration-300;
   }
   
   .portfolio-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-4;
+    @apply absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6;
+  }
+  
+  .portfolio-grid {
+    @apply grid gap-4 grid-cols-1 md:grid-cols-2;
+  }
+  
+  .portfolio-category {
+    @apply text-xs uppercase tracking-widest text-drone-orange/80 mb-1;
+  }
+  
+  .portfolio-title {
+    @apply text-xl font-medium text-white mb-2;
+  }
+  
+  .section-title-container {
+    @apply flex flex-col mb-16 relative;
+  }
+  
+  .section-subtitle {
+    @apply text-xs uppercase tracking-widest text-drone-orange mb-2;
+  }
+  
+  .section-title {
+    @apply drone-subheading pb-4 relative inline-block;
+  }
+  
+  .section-title::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-12 h-0.5 bg-drone-orange;
   }
 }
