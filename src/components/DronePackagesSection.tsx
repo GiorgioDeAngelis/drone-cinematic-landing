@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Camera, Image, Video } from "lucide-react";
 
@@ -63,9 +62,9 @@ const DronePackagesSection = () => {
   return (
     <div id="drone-packages" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-neutral-900">
       <div className="container mx-auto">
-        <div className="mb-16">
-          <span className="text-xs uppercase tracking-widest text-orange-500 mb-2 block">I Nostri Servizi</span>
-          <h2 className="text-2xl md:text-3xl font-montserrat font-extrabold tracking-tight pb-4 text-white">Pacchetti Riprese con Drone</h2>
+        <div className="section-title-container mb-16">
+          <span className="section-subtitle">I Nostri Servizi</span>
+          <h2 className="section-title">Pacchetti Riprese con Drone</h2>
           <p className="text-gray-400 max-w-2xl mt-4">
             Scegli il pacchetto più adatto alle tue esigenze. Tutti i pacchetti includono riprese con drone di alta qualità e licenza per uso personale.
           </p>
