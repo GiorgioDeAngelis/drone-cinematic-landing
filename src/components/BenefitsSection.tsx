@@ -73,7 +73,7 @@ const BenefitsSection = () => {
               className="text-center animate-on-scroll"
             >
               <div className="mb-4 flex justify-center">{benefit.icon}</div>
-              <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
+              <h3 className="text-lg font-montserrat font-extrabold mb-2">{benefit.title}</h3>
               <p className="text-drone-light">{benefit.description}</p>
             </div>
           ))}
