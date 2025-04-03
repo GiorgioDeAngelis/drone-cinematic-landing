@@ -26,8 +26,8 @@ const HeroSection = () => {
           </h1>
           <p className="text-lg md:text-xl text-drone-light mb-8 opacity-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
             Trasforma la tua visione in realtà con riprese aeree mozzafiato. 
-            La nostra esperienza con il DJI Mini 4 Pro garantisce qualità 
-            professionale per ogni progetto.
+            La nostra esperienza e attrezzatura professionale garantisce 
+            qualità eccellente per ogni progetto.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in" style={{ animationDelay: '0.9s' }}>
             <Button 
