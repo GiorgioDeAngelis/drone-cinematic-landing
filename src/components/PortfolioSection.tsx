@@ -123,7 +123,7 @@ const PortfolioSection = () => {
                       hoveredItem === item.id ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
                     } transition-all duration-300 delay-75`}>
                       <p className="portfolio-category">{item.category}</p>
-                      <h3 className="portfolio-title">{item.title}</h3>
+                      <h3 className="portfolio-title font-montserrat font-extrabold">{item.title}</h3>
                     </div>
                   </div>
                 </div>
