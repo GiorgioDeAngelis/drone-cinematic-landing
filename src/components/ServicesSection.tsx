@@ -68,7 +68,7 @@ const ServicesSection = () => {
               className="service-card animate-on-scroll"
             >
               <div className="mb-6">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+              <h3 className="text-xl font-montserrat font-extrabold mb-3">{service.title}</h3>
               <p className="text-drone-light">{service.description}</p>
             </div>
           ))}
