@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import ScrollAnimation from "./ScrollAnimation";
 
 const portfolioItems = [
   {
@@ -37,11 +38,16 @@ const portfolioItems = [
 const PortfolioSection = () => {
   const [selectedItem, setSelectedItem] = useState<number | null>(null);
   const [open, setOpen] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   const handleItemClick = (id: number) => {
     setSelectedItem(id);
     setOpen(true);
+  };
+
+  const handleItemHover = (id: number | null) => {
+    setHoveredItem(id);
   };
 
   useEffect(() => {
@@ -84,34 +90,45 @@ const PortfolioSection = () => {
         </div>
         
         <div className="portfolio-grid">
-          {portfolioItems.map((item) => (
-            <div 
-              key={item.id} 
-              className="portfolio-item group animate-on-scroll cursor-pointer"
-              onClick={() => handleItemClick(item.id)}
-            >
-              <div className="relative overflow-hidden">
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="portfolio-overlay group-hover:opacity-100">
-                  <div className="absolute top-6 right-6">
-                    <div className="bg-drone-orange/80 rounded-full p-2">
-                      <ArrowUpRight className="w-4 h-4 text-white" />
+          {portfolioItems.map((item, index) => (
+            <ScrollAnimation key={item.id} delay={index * 150}>
+              <div 
+                className="portfolio-item group cursor-pointer"
+                onClick={() => handleItemClick(item.id)}
+                onMouseEnter={() => handleItemHover(item.id)}
+                onMouseLeave={() => handleItemHover(null)}
+              >
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title} 
+                    className={`w-full aspect-[4/3] object-cover transition-transform duration-700 ${
+                      hoveredItem === item.id ? 'scale-105' : ''
+                    }`}
+                  />
+                  <div className="portfolio-overlay group-hover:opacity-100">
+                    <div className="absolute top-6 right-6">
+                      <div className={`bg-drone-orange/80 rounded-full p-2 transform ${
+                        hoveredItem === item.id ? 'rotate-45 scale-110' : 'rotate-0'
+                      } transition-all duration-300`}>
+                        <ArrowUpRight className="w-4 h-4 text-white" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="absolute top-6 left-6 text-2xl font-bold opacity-60">
-                    {item.number}
-                  </div>
-                  <div>
-                    <p className="portfolio-category">{item.category}</p>
-                    <h3 className="portfolio-title">{item.title}</h3>
+                    <div className={`absolute top-6 left-6 text-2xl font-bold opacity-60 transform ${
+                      hoveredItem === item.id ? 'translate-x-2' : 'translate-x-0'
+                    } transition-all duration-300`}>
+                      {item.number}
+                    </div>
+                    <div className={`transform ${
+                      hoveredItem === item.id ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+                    } transition-all duration-300 delay-75`}>
+                      <p className="portfolio-category">{item.category}</p>
+                      <h3 className="portfolio-title">{item.title}</h3>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </ScrollAnimation>
           ))}
         </div>
         

@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -96,7 +95,7 @@
   }
   
   .portfolio-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6;
+    @apply absolute inset-0 bg-gradient-to-b from-black/90 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6;
   }
   
   .portfolio-grid {
