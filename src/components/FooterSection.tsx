@@ -7,8 +7,10 @@ const FooterSection = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-drone-orange font-montserrat font-extrabold text-xl mb-4">DroneCreative</h3>
-            <p className="text-drone-light mb-4">
+            <a href="#" className="text-drone-orange font-montserrat text-2xl font-extrabold">
+              Drone<span className="text-white">Creative</span>
+            </a>
+            <p className="text-drone-light mb-4 mt-4">
               Servizi professionali di ripresa aerea per dare una nuova prospettiva ai tuoi progetti.
             </p>
             <div className="flex space-x-4">
