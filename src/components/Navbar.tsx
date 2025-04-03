@@ -29,7 +29,7 @@ const Navbar = () => {
       isScrolled ? 'bg-black/80 backdrop-blur-md py-4' : 'bg-transparent py-6'
     }`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="text-drone-orange font-playfair text-2xl font-bold">
+        <a href="#" className="text-drone-orange font-montserrat text-2xl font-extrabold">
           Drone<span className="text-white">Creative</span>
         </a>
         
