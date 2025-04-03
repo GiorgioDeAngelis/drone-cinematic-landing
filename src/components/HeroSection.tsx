@@ -30,7 +30,7 @@ const HeroSection = () => {
             <Button size="lg" className="bg-drone-orange hover:bg-drone-orange/90 text-white">
               Richiedi un preventivo <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="outline" size="lg" className="border-drone-orange/30 hover:bg-drone-orange/10 text-white hover:text-drone-orange transition-colors">
+            <Button variant="outline" size="lg" className="border-drone-orange/30 hover:bg-drone-orange/10 text-black hover:text-drone-orange transition-colors">
               Scopri i nostri servizi
             </Button>
           </div>
