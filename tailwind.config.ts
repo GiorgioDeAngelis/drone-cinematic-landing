@@ -54,11 +54,11 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				drone: {
-					dark: '#222222',
-					darkBlue: '#333333',
-					orange: '#555555',
-					gold: '#888888',
-					light: '#F1F1F1',
+					dark: '#0F0F0F',
+					darkBlue: '#0D1B2A',
+					orange: '#FF7A00',
+					gold: '#FFD700',
+					light: '#E5E5E5',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
