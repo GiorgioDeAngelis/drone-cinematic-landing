@@ -81,7 +81,7 @@ const PortfolioSection = () => {
           {portfolioItems.map((item, index) => (
             <div 
               key={item.id} 
-              className="portfolio-item animate-on-scroll"
+              className="portfolio-item group animate-on-scroll"
               onClick={() => handleItemClick(item.id)}
             >
               <img 
@@ -89,7 +89,7 @@ const PortfolioSection = () => {
                 alt={item.title} 
                 className="w-full h-64 object-cover"
               />
-              <div className="portfolio-overlay">
+              <div className="portfolio-overlay group-hover:opacity-100">
                 <h3 className="text-white text-xl font-medium">{item.title}</h3>
                 <p className="text-drone-orange">{item.category}</p>
               </div>

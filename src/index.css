@@ -88,10 +88,10 @@
   }
   
   .portfolio-item {
-    @apply relative overflow-hidden rounded-lg group transition-all duration-300;
+    @apply relative overflow-hidden rounded-lg transition-all duration-300;
   }
   
   .portfolio-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4;
+    @apply absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-4;
   }
 }
