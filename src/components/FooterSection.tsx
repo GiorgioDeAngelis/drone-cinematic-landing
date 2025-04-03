@@ -7,7 +7,7 @@ const FooterSection = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-drone-orange font-playfair text-xl mb-4">DroneCreative</h3>
+            <h3 className="text-drone-orange font-montserrat font-extrabold text-xl mb-4">DroneCreative</h3>
             <p className="text-drone-light mb-4">
               Servizi professionali di ripresa aerea per dare una nuova prospettiva ai tuoi progetti.
             </p>
@@ -31,7 +31,7 @@ const FooterSection = () => {
           </div>
           
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Contatti</h3>
+            <h3 className="text-white font-montserrat font-extrabold text-lg mb-4">Contatti</h3>
             <ul className="space-y-3">
               <li className="flex items-center text-drone-light">
                 <Mail className="h-5 w-5 mr-3 text-drone-orange" />
@@ -49,7 +49,7 @@ const FooterSection = () => {
           </div>
           
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Naviga</h3>
+            <h3 className="text-white font-montserrat font-extrabold text-lg mb-4">Naviga</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#hero" className="text-drone-light hover:text-drone-orange transition-colors">Home</a>
