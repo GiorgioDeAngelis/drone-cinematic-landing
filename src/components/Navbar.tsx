@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,11 +18,12 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#hero' },
-    { name: 'Servizi', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Testimonianze', href: '#testimonials' },
-    { name: 'Contatti', href: '#contact' },
+    { name: 'Home', href: '#hero', path: '/' },
+    { name: 'Servizi', href: '#services', path: '/' },
+    { name: 'Portfolio', href: '#portfolio', path: '/' },
+    { name: 'Pacchetti', href: '#packages', path: '/packages' },
+    { name: 'Testimonianze', href: '#testimonials', path: '/' },
+    { name: 'Contatti', href: '#contact', path: '/' },
   ];
 
   return (
@@ -29,20 +31,30 @@ const Navbar = () => {
       isScrolled ? 'bg-neutral-900/80 backdrop-blur-md py-4' : 'bg-transparent py-6'
     }`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="text-drone-orange font-montserrat text-2xl font-extrabold">
+        <Link to="/" className="text-drone-orange font-montserrat text-2xl font-extrabold">
           Drone<span className="text-white">Creative</span>
-        </a>
+        </Link>
         
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
-            <a 
-              key={link.name}
-              href={link.href}
-              className="text-white/80 hover:text-drone-orange transition-colors"
-            >
-              {link.name}
-            </a>
+            link.path === '/' ? (
+              <a 
+                key={link.name}
+                href={link.href}
+                className="text-white/80 hover:text-drone-orange transition-colors"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <Link 
+                key={link.name}
+                to={link.path}
+                className="text-white/80 hover:text-drone-orange transition-colors"
+              >
+                {link.name}
+              </Link>
+            )
           ))}
         </div>
         
@@ -67,14 +79,25 @@ const Navbar = () => {
         <div className="md:hidden bg-neutral-900/95 backdrop-blur-md">
           <div className="container mx-auto px-6 py-4 flex flex-col space-y-4">
             {navLinks.map((link) => (
-              <a 
-                key={link.name}
-                href={link.href}
-                className="text-white/80 hover:text-drone-orange transition-colors py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.name}
-              </a>
+              link.path === '/' ? (
+                <a 
+                  key={link.name}
+                  href={link.href}
+                  className="text-white/80 hover:text-drone-orange transition-colors py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link 
+                  key={link.name}
+                  to={link.path}
+                  className="text-white/80 hover:text-drone-orange transition-colors py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
             <Button 
               variant="default" 
