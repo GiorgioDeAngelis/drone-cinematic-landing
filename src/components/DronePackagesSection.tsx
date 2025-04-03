@@ -65,7 +65,7 @@ const DronePackagesSection = () => {
       <div className="container mx-auto">
         <div className="mb-16">
           <span className="text-xs uppercase tracking-widest text-orange-500 mb-2 block">I Nostri Servizi</span>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight pb-4 text-white">Pacchetti Riprese con Drone</h2>
+          <h2 className="text-2xl md:text-3xl font-montserrat font-extrabold tracking-tight pb-4 text-white">Pacchetti Riprese con Drone</h2>
           <p className="text-gray-400 max-w-2xl mt-4">
             Scegli il pacchetto più adatto alle tue esigenze. Tutti i pacchetti includono riprese con drone di alta qualità e licenza per uso personale.
           </p>
