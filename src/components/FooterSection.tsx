@@ -5,8 +5,8 @@ const FooterSection = () => {
   return (
     <footer className="bg-black py-12 px-6">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 justify-between w-full">
+          <div className="md:col-span-1">
             <a href="#" className="text-drone-orange font-montserrat text-2xl font-extrabold">
               Drone<span className="text-white">Creative</span>
             </a>
@@ -32,7 +32,7 @@ const FooterSection = () => {
             </div>
           </div>
           
-          <div>
+          <div className="md:col-span-1">
             <h3 className="text-white font-montserrat font-extrabold text-lg mb-4">Contatti</h3>
             <ul className="space-y-3">
               <li className="flex items-center text-drone-light">
@@ -50,7 +50,7 @@ const FooterSection = () => {
             </ul>
           </div>
           
-          <div>
+          <div className="md:col-span-1">
             <h3 className="text-white font-montserrat font-extrabold text-lg mb-4">Naviga</h3>
             <ul className="space-y-2">
               <li>
