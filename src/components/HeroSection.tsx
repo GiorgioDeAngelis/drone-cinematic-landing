@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 const HeroSection = () => {
@@ -29,7 +30,7 @@ const HeroSection = () => {
             <Button size="lg" className="bg-drone-orange hover:bg-drone-orange/90 text-white">
               Richiedi un preventivo <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="outline" size="lg" className="border-white/30 hover:bg-white/10 text-stone-950">
+            <Button variant="outline" size="lg" className="border-drone-orange/30 hover:bg-drone-orange/10 text-white hover:text-drone-orange transition-colors">
               Scopri i nostri servizi
             </Button>
           </div>
