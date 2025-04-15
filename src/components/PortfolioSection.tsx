@@ -39,6 +39,7 @@ const PortfolioSection = () => {
   const [open, setOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const handleItemClick = (id: number) => {
     setSelectedItem(id);
@@ -48,6 +49,29 @@ const PortfolioSection = () => {
   const handleItemHover = (id: number | null) => {
     setHoveredItem(id);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      itemRefs.current.forEach((item, index) => {
+        if (item) {
+          const rect = item.getBoundingClientRect();
+          const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+          
+          if (isVisible) {
+            const scrollPosition = window.scrollY;
+            const elementOffset = rect.top + scrollPosition;
+            const distance = scrollPosition - elementOffset;
+            const translateY = Math.min(Math.max(distance * 0.1, -20), 20); // Limit parallax effect
+            
+            item.style.transform = `translateY(${translateY}px)`;
+          }
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -92,7 +116,8 @@ const PortfolioSection = () => {
           {portfolioItems.map((item, index) => (
             <ScrollAnimation key={item.id} delay={index * 150}>
               <div 
-                className="portfolio-item group cursor-pointer"
+                ref={el => itemRefs.current[index] = el}
+                className="portfolio-item group cursor-pointer transition-transform duration-700"
                 onClick={() => handleItemClick(item.id)}
                 onMouseEnter={() => handleItemHover(item.id)}
                 onMouseLeave={() => handleItemHover(null)}
