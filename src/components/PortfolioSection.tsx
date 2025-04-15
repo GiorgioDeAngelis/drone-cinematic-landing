@@ -112,7 +112,7 @@ const PortfolioSection = () => {
           </p>
         </div>
         
-        <div className="portfolio-grid">
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {portfolioItems.map((item, index) => (
             <ScrollAnimation key={item.id} delay={index * 150}>
               <div 
