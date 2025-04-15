@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
@@ -85,7 +84,7 @@ const PortfolioSection = () => {
           <span className="section-subtitle">Le Nostre Opere</span>
           <h2 className="section-title">Portfolio</h2>
           <p className="text-gray-400 max-w-2xl mt-4">
-            Scopri alcuni dei nostri migliori progetti e lasciati ispirare dalle possibilità creative
+            Scopri alcuni dei nostri migliori progetti e lasciati ispirate dalle possibilità creative
           </p>
         </div>
         
@@ -102,7 +101,7 @@ const PortfolioSection = () => {
                   <img 
                     src={item.image} 
                     alt={item.title} 
-                    className={`w-full aspect-[4/3] object-cover transition-transform duration-700 ${
+                    className={`w-full aspect-[9/16] object-cover transition-transform duration-700 ${
                       hoveredItem === item.id ? 'scale-105' : ''
                     }`}
                   />
