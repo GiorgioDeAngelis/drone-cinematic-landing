@@ -21,10 +21,20 @@ const Navbar = () => {
     { name: 'Home', href: '#hero', path: '/' },
     { name: 'Servizi', href: '#services', path: '/' },
     { name: 'Portfolio', href: '#portfolio', path: '/' },
-    { name: 'Pacchetti', href: '#packages', path: '/packages' },
+    { name: 'Pacchetti', href: '#packages', path: '/' }, // Changed path to '/'
     { name: 'Testimonianze', href: '#testimonials', path: '/' },
     { name: 'Contatti', href: '#contact', path: '/' },
   ];
+
+  const handleNavLinkClick = (href: string) => {
+    if (href.startsWith('#')) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      setMobileMenuOpen(false);
+    }
+  };
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -38,23 +48,14 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
-            link.path === '/' ? (
-              <a 
-                key={link.name}
-                href={link.href}
-                className="text-white/80 hover:text-drone-orange transition-colors"
-              >
-                {link.name}
-              </a>
-            ) : (
-              <Link 
-                key={link.name}
-                to={link.path}
-                className="text-white/80 hover:text-drone-orange transition-colors"
-              >
-                {link.name}
-              </Link>
-            )
+            <a 
+              key={link.name}
+              href={link.href}
+              onClick={() => handleNavLinkClick(link.href)}
+              className="text-white/80 hover:text-drone-orange transition-colors"
+            >
+              {link.name}
+            </a>
           ))}
         </div>
         
@@ -79,25 +80,14 @@ const Navbar = () => {
         <div className="md:hidden bg-neutral-900/95 backdrop-blur-md">
           <div className="container mx-auto px-6 py-4 flex flex-col space-y-4">
             {navLinks.map((link) => (
-              link.path === '/' ? (
-                <a 
-                  key={link.name}
-                  href={link.href}
-                  className="text-white/80 hover:text-drone-orange transition-colors py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.name}
-                </a>
-              ) : (
-                <Link 
-                  key={link.name}
-                  to={link.path}
-                  className="text-white/80 hover:text-drone-orange transition-colors py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              )
+              <a 
+                key={link.name}
+                href={link.href}
+                onClick={() => handleNavLinkClick(link.href)}
+                className="text-white/80 hover:text-drone-orange transition-colors py-2"
+              >
+                {link.name}
+              </a>
             ))}
             <Button 
               variant="default" 
