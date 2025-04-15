@@ -21,7 +21,7 @@ const Navbar = () => {
     { name: 'Home', href: '#hero', path: '/' },
     { name: 'Servizi', href: '#services', path: '/' },
     { name: 'Portfolio', href: '#portfolio', path: '/' },
-    { name: 'Pacchetti', href: '#packages', path: '/' }, // Changed path to '/'
+    { name: 'Pacchetti', href: '#drone-packages', path: '/' }, // Updated to match the correct ID
     { name: 'Testimonianze', href: '#testimonials', path: '/' },
     { name: 'Contatti', href: '#contact', path: '/' },
   ];
